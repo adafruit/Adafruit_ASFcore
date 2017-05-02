@@ -423,7 +423,7 @@ enum system_interrupt_priority_level system_interrupt_get_priority(
  */
 
 #ifdef __cplusplus
-//}       // remove due to nested extern C' complaints
+} 
 #endif
 
 #endif // #ifndef SYSTEM_INTERRUPT_H_INCLUDED
