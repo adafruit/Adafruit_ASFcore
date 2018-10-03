@@ -725,16 +725,25 @@
  * \name SAM3U series
  * @{
  */
+#ifdef SAM3U1
+#undef SAM3U1
+#endif
 #define SAM3U1 ( \
 		SAM_PART_IS_DEFINED(SAM3U1C) ||	\
 		SAM_PART_IS_DEFINED(SAM3U1E) \
 		)
 
+#ifdef SAM3U2
+#undef SAM3U2
+#endif
 #define SAM3U2 ( \
 		SAM_PART_IS_DEFINED(SAM3U2C) ||	\
 		SAM_PART_IS_DEFINED(SAM3U2E) \
 		)
 
+#ifdef SAM3U4
+#undef SAM3U4
+#endif
 #define SAM3U4 ( \
 		SAM_PART_IS_DEFINED(SAM3U4C) ||	\
 		SAM_PART_IS_DEFINED(SAM3U4E) \
@@ -779,11 +788,17 @@
  * \name SAM3X series
  * @{
  */
+#ifdef SAM3X4
+#undef SAM3X4
+#endif
 #define SAM3X4 ( \
 		SAM_PART_IS_DEFINED(SAM3X4C) ||	\
 		SAM_PART_IS_DEFINED(SAM3X4E) \
 		)
 
+#ifdef SAM3X8
+#undef SAM3X8
+#endif
 #define SAM3X8 ( \
 		SAM_PART_IS_DEFINED(SAM3X8C) ||	\
 		SAM_PART_IS_DEFINED(SAM3X8E) ||	\
@@ -795,10 +810,16 @@
  * \name SAM3A series
  * @{
  */
+#ifdef SAM3A4
+#undef SAM3A4
+#endif
 #define SAM3A4 ( \
 		SAM_PART_IS_DEFINED(SAM3A4C) \
 		)
 
+#ifdef SAM3A8
+#undef SAM3A8
+#endif
 #define SAM3A8 ( \
 		SAM_PART_IS_DEFINED(SAM3A8C) \
 		)
@@ -808,38 +829,59 @@
  * \name SAM4S series
  * @{
  */
+#ifdef SAM4S2
+#undef SAM4S2
+#endif
 #define SAM4S2 ( \
 		SAM_PART_IS_DEFINED(SAM4S2A) || \
  		SAM_PART_IS_DEFINED(SAM4S2B) || \
  		SAM_PART_IS_DEFINED(SAM4S2C) \
  		)
 
+#ifdef SAM4S4
+#undef SAM4S4
+#endif
 #define SAM4S4 ( \
 		SAM_PART_IS_DEFINED(SAM4S4A) || \
  		SAM_PART_IS_DEFINED(SAM4S4B) || \
  		SAM_PART_IS_DEFINED(SAM4S4C) \
  		)
 
+#ifdef SAM4S8
+#undef SAM4S8
+#endif
 #define SAM4S8 ( \
 		SAM_PART_IS_DEFINED(SAM4S8B) ||	\
 		SAM_PART_IS_DEFINED(SAM4S8C) \
 		)
 
+#ifdef SAM4S16
+#undef SAM4S16
+#endif
 #define SAM4S16 ( \
 		SAM_PART_IS_DEFINED(SAM4S16B) || \
 		SAM_PART_IS_DEFINED(SAM4S16C) \
 		)
 
+#ifdef SAM4SA16
+#undef SAM4SA16
+#endif
 #define SAM4SA16 ( \
 		SAM_PART_IS_DEFINED(SAM4SA16B) || \
 		SAM_PART_IS_DEFINED(SAM4SA16C)    \
 	)
 
+#ifdef SAM4SD16
+#undef SAM4SD16
+#endif
 #define SAM4SD16 ( \
 		SAM_PART_IS_DEFINED(SAM4SD16B) || \
 		SAM_PART_IS_DEFINED(SAM4SD16C)    \
 	)
 
+#ifdef SAM4SD32
+#undef SAM4SD32
+#endif
 #define SAM4SD32 ( \
 		SAM_PART_IS_DEFINED(SAM4SD32B) || \
 		SAM_PART_IS_DEFINED(SAM4SD32C)    \
@@ -1202,11 +1244,17 @@
  * \name SAM4E series
  * @{
  */
+#ifdef SAM4E8
+#undef SAM4E8
+#endif
 #define SAM4E8 ( \
 		SAM_PART_IS_DEFINED(SAM4E8C) || \
 		SAM_PART_IS_DEFINED(SAM4E8E) \
 		)
 
+#ifdef SAM4E16
+#undef SAM4E16
+#endif
 #define SAM4E16 ( \
 		SAM_PART_IS_DEFINED(SAM4E16C) || \
 		SAM_PART_IS_DEFINED(SAM4E16E) \
@@ -1217,12 +1265,17 @@
  * \name SAM4N series
  * @{
  */
+#ifdef SAM4N8
+#undef SAM4N8
+#endif
 #define SAM4N8 ( \
 		SAM_PART_IS_DEFINED(SAM4N8A) || \
 		SAM_PART_IS_DEFINED(SAM4N8B) || \
 		SAM_PART_IS_DEFINED(SAM4N8C) \
 		)
-
+#ifdef SAM4N16
+#undef SAM4N16
+#endif
 #define SAM4N16 ( \
 		SAM_PART_IS_DEFINED(SAM4N16B) || \
 		SAM_PART_IS_DEFINED(SAM4N16C) \
@@ -1589,6 +1642,9 @@
 /** @} */
 
 /** SAM product line */
+#ifdef SAM
+#undef SAM
+#endif
 #define SAM (SAM3S || SAM3U || SAM3N || SAM3XA || SAM4S || SAM4L || SAM4E || \
 		SAM0 || SAM4N || SAM4C || SAM4CM || SAM4CP || SAMG || SAMV71 || SAMV70 || SAME70 || SAMS70)
 
